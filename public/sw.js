@@ -1,11 +1,11 @@
 const CACHE_NAME = 'saf-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/logo192.png',
-  '/logo512.png',
-  '/favicon.svg'
+  './',
+  'index.html',
+  'manifest.json',
+  'logo192.png',
+  'logo512.png',
+  'favicon.svg'
 ];
 
 self.addEventListener('install', event => {
