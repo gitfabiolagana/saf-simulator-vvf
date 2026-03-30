@@ -36,18 +36,18 @@ const DEFAULT_SETTINGS = {
   customSeconds: 900, customPass: 80, customDifficulty: "all", ttsEnabled: true,
   customAreas: ALL_AREAS.map(a=>a.key), globalTimerSeconds: 300,
 };
-function RadarChart({data=[],size=200}){
+function RadarChart({data=[],size=220}){
   const n=data.length; if(n<3)return null;
   const cx=size/2,cy=size/2,r=size*0.36;
   const ang=i=>(2*Math.PI*i/n)-Math.PI/2;
   const pt=(i,f)=>({x:cx+Math.cos(ang(i))*r*f,y:cy+Math.sin(ang(i))*r*f});
   const grid=[.25,.5,.75,1].map(f=>data.map((_,i)=>pt(i,f)).map((p,j)=>`${j===0?'M':'L'}${p.x},${p.y}`).join(' ')+'Z');
   const poly=data.map((d,i)=>{const p=pt(i,(d.value||0)/100);return `${i===0?'M':'L'}${p.x},${p.y}`;}).join(' ')+'Z';
-  return(<svg width={size} height={size} className="mx-auto">
+  return(<svg width="100%" height={size} viewBox={`0 0 ${size} ${size}`} className="mx-auto max-w-[280px]">
     {grid.map((d,i)=><path key={i} d={d} fill="none" stroke="#e2e8f0" strokeWidth="1"/>)}
     {data.map((_,i)=>{const e=pt(i,1);return<line key={i} x1={cx} y1={cy} x2={e.x} y2={e.y} stroke="#e2e8f0" strokeWidth="1"/>;})}
     <path d={poly} fill="rgba(99,102,241,0.2)" stroke="#6366f1" strokeWidth="2"/>
-    {data.map((d,i)=>{const lp=pt(i,1.22);return<text key={i} x={lp.x} y={lp.y} textAnchor="middle" dominantBaseline="middle" fontSize="8" fill="#475569" fontWeight="600">{d.label}</text>;})}
+    {data.map((d,i)=>{const lp=pt(i,1.22);return<text key={i} x={lp.x} y={lp.y} textAnchor="middle" dominantBaseline="middle" fontSize="10" fill="#475569" fontWeight="600" style={{fontSize: '9px'}}>{d.label}</text>;})}
   </svg>);
 }
 function LineChart({data=[]}){
@@ -134,13 +134,13 @@ function StatCard({ title, value, icon: Icon, accent = "default", extraAction })
   return (
     <Card className={`border ${accentMap[accent]} relative overflow-hidden group transition-all duration-300 print:border-slate-300 print:shadow-none`}>
       <CardContent className="p-5">
-        <div className="flex items-center justify-between gap-3 relative z-10">
-          <div>
-            <div className="text-xs uppercase tracking-wider font-semibold opacity-70 mb-1">{title}</div>
-            <div className="text-2xl md:text-3xl font-bold tracking-tight">{value}</div>
+        <div className="flex items-center justify-between gap-2 relative z-10">
+          <div className="min-w-0">
+            <div className="text-[10px] md:text-xs uppercase tracking-wider font-semibold opacity-70 mb-1 truncate">{title}</div>
+            <div className="text-xl md:text-3xl font-bold tracking-tight">{value}</div>
           </div>
-          <div className="rounded-2xl bg-white/60 p-3 shadow-sm flex flex-col items-center gap-2 print:hidden">
-            <Icon className="h-6 w-6 opacity-80" />
+          <div className="shrink-0 rounded-xl md:rounded-2xl bg-white/60 p-2 md:p-3 shadow-sm flex flex-col items-center gap-1 md:gap-2 print:hidden">
+            <Icon className="h-4 w-4 md:h-6 md:w-6 opacity-80" />
             {extraAction}
           </div>
         </div>
@@ -191,6 +191,11 @@ export default function SimulatoreEsameSAF() {
     meta.name = 'theme-color'; meta.content = '#4f46e5';
     document.head.appendChild(meta);
   }, []);
+
+  React.useEffect(() => {
+    // Auto-scroll to top when question changes on mobile
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentIndex]);
 
   function saveNote() {
     if (!editingNote) return;
@@ -493,40 +498,40 @@ export default function SimulatoreEsameSAF() {
       {/* HEADER HERO AREA */}
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 px-4 py-8 md:py-12 text-white shadow-xl mb-8 relative print:hidden">
         <div className="mx-auto max-w-6xl space-y-4">
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-            <div className="space-y-4 max-w-2xl">
-              <div className="flex items-center gap-3">
-                <Badge className="rounded-full bg-indigo-500/30 text-indigo-100 border border-indigo-400/20 px-3 py-1">Simulatore SAF VVF</Badge>
-                <Badge className="rounded-full bg-white/10 text-white/90 border border-white/10 px-3 py-1">{configObj.label}</Badge>
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div className="space-y-3 md:space-y-4 max-w-2xl text-center lg:text-left">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 md:gap-3">
+                <Badge className="rounded-full bg-indigo-500/30 text-indigo-100 border border-indigo-400/20 px-3 py-1 text-[10px] md:text-xs">Simulatore SAF VVF</Badge>
+                <Badge className="rounded-full bg-white/10 text-white/90 border border-white/10 px-3 py-1 text-[10px] md:text-xs">{configObj.label}</Badge>
               </div>
-              <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">Accademia Anticaduta</h1>
-              <p className="text-indigo-100/70 text-sm md:text-base leading-relaxed">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight">Accademia Anticaduta</h1>
+              <p className="text-indigo-100/70 text-xs md:text-sm lg:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Apprendimento interattivo, dashboard analitica e generatori custom. 
                 Tutto quello che serve per superare la teoria operativa SAF VVF.
               </p>
             </div>
             
-            <div className="shrink-0 flex flex-wrap md:flex-col gap-3">
+            <div className="shrink-0 grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-col gap-2 md:gap-3">
               {streak.count > 0 && (
-                <div className="flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 rounded-xl px-4 py-2 text-amber-200 text-sm font-semibold">
-                  <Flame className="h-4 w-4 text-amber-400"/>
+                <div className="col-span-2 sm:col-span-3 lg:col-auto flex items-center justify-center lg:justify-start gap-2 bg-amber-500/20 border border-amber-400/30 rounded-xl px-4 py-2 text-amber-200 text-xs md:text-sm font-semibold">
+                  <Flame className="h-3 w-3 md:h-4 md:w-4 text-amber-400"/>
                   Streak: {streak.count} {streak.count===1?"giorno":"giorni"}
                 </div>
               )}
-              <Button size="lg" className={`rounded-xl shadow-md ${tab==="exam" ? "bg-indigo-500 hover:bg-indigo-600 text-white" : "bg-white/10 text-white hover:bg-white/20"} w-full md:w-36 justify-start`} onClick={() => setTab("exam")}>
-                <Layers3 className="mr-2 h-5 w-5" /> Esame
+              <Button size="sm" className={`rounded-xl shadow-md ${tab==="exam" ? "bg-indigo-500 text-white" : "bg-white/10 text-white"} lg:w-36 justify-center lg:justify-start h-10 md:h-12`} onClick={() => setTab("exam")}>
+                <Layers3 className="mr-2 h-4 w-4 md:h-5 md:w-5" /> <span className="text-xs md:text-sm">Esame</span>
               </Button>
-              <Button size="lg" className={`rounded-xl shadow-md ${tab==="flashcard" ? "bg-indigo-500 hover:bg-indigo-600 text-white" : "bg-white/10 text-white hover:bg-white/20"} w-full md:w-36 justify-start`} onClick={() => setTab("flashcard")}>
-                <CreditCard className="mr-2 h-5 w-5" /> Cards
+              <Button size="sm" className={`rounded-xl shadow-md ${tab==="flashcard" ? "bg-indigo-500 text-white" : "bg-white/10 text-white"} lg:w-36 justify-center lg:justify-start h-10 md:h-12`} onClick={() => setTab("flashcard")}>
+                <CreditCard className="mr-2 h-4 w-4 md:h-5 md:w-5" /> <span className="text-xs md:text-sm">Cards</span>
               </Button>
-              <Button size="lg" className={`rounded-xl shadow-md ${tab==="library" ? "bg-indigo-500 hover:bg-indigo-600 text-white" : "bg-white/10 text-white hover:bg-white/20"} w-full md:w-36 justify-start`} onClick={() => setTab("library")}>
-                <BookOpen className="mr-2 h-5 w-5" /> Biblioteca
+              <Button size="sm" className={`rounded-xl shadow-md ${tab==="library" ? "bg-indigo-500 text-white" : "bg-white/10 text-white"} lg:w-36 justify-center lg:justify-start h-10 md:h-12`} onClick={() => setTab("library")}>
+                <BookOpen className="mr-2 h-4 w-4 md:h-5 md:w-5" /> <span className="text-xs md:text-sm">Biblioteca</span>
               </Button>
-              <Button size="lg" className={`rounded-xl shadow-md ${tab==="history" ? "bg-indigo-500 hover:bg-indigo-600 text-white" : "bg-white/10 text-white hover:bg-white/20"} w-full md:w-36 justify-start`} onClick={() => setTab("history")}>
-                <BarChart3 className="mr-2 h-5 w-5" /> Dashboard
+              <Button size="sm" className={`rounded-xl shadow-md ${tab==="history" ? "bg-indigo-500 text-white" : "bg-white/10 text-white"} lg:w-36 justify-center lg:justify-start h-10 md:h-12`} onClick={() => setTab("history")}>
+                <BarChart3 className="mr-2 h-4 w-4 md:h-5 md:w-5" /> <span className="text-xs md:text-sm">Dashboard</span>
               </Button>
-              <Button size="lg" className={`rounded-xl shadow-md ${tab==="settings" ? "bg-indigo-500 hover:bg-indigo-600 text-white" : "bg-white/10 text-white hover:bg-white/20"} w-full md:w-36 justify-start`} onClick={() => setTab("settings")}>
-                <Sliders className="mr-2 h-5 w-5" /> Config
+              <Button size="sm" className={`rounded-xl shadow-md ${tab==="settings" ? "bg-indigo-500 text-white" : "bg-white/10 text-white"} lg:w-36 justify-center lg:justify-start h-10 md:h-12`} onClick={() => setTab("settings")}>
+                <Sliders className="mr-2 h-4 w-4 md:h-5 md:w-5" /> <span className="text-xs md:text-sm">Config</span>
               </Button>
             </div>
           </motion.div>
@@ -543,11 +548,11 @@ export default function SimulatoreEsameSAF() {
           <motion.div key="history" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} className="space-y-6">
             
             {/* KPI DASHBOARD */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
               <StatCard title="Test Sostenuti" value={totalExams} icon={Layers3} accent="indigo" />
               <StatCard title="Prove Superate" value={passedExams} icon={CheckCircle2} accent="success" />
-              <StatCard title="Media Globale" value={`${avgPercent}%`} icon={Trophy} accent="warning" />
-              <StatCard title="Streak Giorni" value={`${streak.count}🔥`} icon={Calendar} accent="danger" />
+              <StatCard title="Media" value={`${avgPercent}%`} icon={Trophy} accent="warning" />
+              <StatCard title="Streak" value={`${streak.count}🔥`} icon={Calendar} accent="danger" />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -589,13 +594,13 @@ export default function SimulatoreEsameSAF() {
 
             <Card className="border-slate-200 shadow-lg rounded-3xl overflow-hidden bg-white mt-8">
               <CardHeader className="bg-slate-50/80 border-b border-slate-100 p-6 md:p-8">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
-                    <CardTitle className="text-2xl text-slate-800 font-bold">Cronologia Dettagliata</CardTitle>
-                    <CardDescription className="text-slate-500 text-base mt-2">Gli ultimi {history.length} esami completati</CardDescription>
+                    <CardTitle className="text-xl md:text-2xl text-slate-800 font-bold">Cronologia Dettagliata</CardTitle>
+                    <CardDescription className="text-slate-500 text-sm md:text-base mt-1 md:mt-2">Gli ultimi {history.length} esami completati</CardDescription>
                   </div>
                   {history.length > 0 && (
-                    <Button variant="outline" className="text-rose-600 border-rose-200 hover:bg-rose-50" onClick={clearHistory}>
+                    <Button variant="outline" size="sm" className="text-rose-600 border-rose-200 hover:bg-rose-50 w-full sm:w-auto" onClick={clearHistory}>
                       <Trash2 className="h-4 w-4 mr-2" /> Cancella Dati
                     </Button>
                   )}
@@ -610,23 +615,23 @@ export default function SimulatoreEsameSAF() {
                 ) : (
                   <div className="divide-y divide-slate-100">
                     {history.map((entry) => (
-                      <div key={entry.id} className="flex flex-wrap md:flex-nowrap items-center justify-between p-6 hover:bg-slate-50/50 transition-colors">
-                        <div className="space-y-1 mb-3 md:mb-0">
-                          <div className="font-bold text-slate-800 text-lg flex items-center gap-2">
-                             {entry.mode} {entry.mode.includes("Survival") && <Flame className="w-4 h-4 text-rose-500" />}
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                          <div className="space-y-1 text-center sm:text-left flex-1 min-w-0">
+                            <div className="font-bold text-slate-800 text-base md:text-lg flex items-center justify-center sm:justify-start gap-2">
+                               {entry.mode} {entry.mode.includes("Survival") && <Flame className="w-4 h-4 text-rose-500" />}
+                            </div>
+                            <div className="text-[10px] md:text-sm text-slate-500 truncate">{entry.date} • Tipo: <b className="text-slate-600">{entry.type}</b></div>
                           </div>
-                          <div className="text-sm text-slate-500">{entry.date} • Tipo Quesiti: <b className="text-slate-600">{entry.type}</b></div>
-                        </div>
-                        <div className="flex items-center gap-6">
-                          <div className="text-right">
-                            <div className="text-2xl font-black tracking-tight text-slate-700">{entry.percent}%</div>
-                            <div className="text-xs font-medium text-slate-400">{entry.score} su {entry.total} PT.</div>
+                          <div className="flex items-center gap-4 md:gap-6 justify-center">
+                            <div className="text-right">
+                              <div className="text-xl md:text-2xl font-black tracking-tight text-slate-700">{entry.percent}%</div>
+                              <div className="text-[10px] font-medium text-slate-400">{entry.score} / {entry.total} PT.</div>
+                            </div>
+                            <Badge className={`px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-sm rounded-xl font-bold shadow-sm whitespace-nowrap ${entry.passed ? "bg-emerald-100 text-emerald-800 border-emerald-200" : "bg-rose-100 text-rose-800 border-rose-200"}`}>
+                              {entry.passed ? "PROMOSSO" : "FALLITO"}
+                            </Badge>
                           </div>
-                          <Badge className={`px-4 py-2 text-sm rounded-xl font-bold shadow-sm ${entry.passed ? "bg-emerald-100 text-emerald-800 border-emerald-200" : "bg-rose-100 text-rose-800 border-rose-200"}`}>
-                            {entry.passed ? "PROMOSSO" : "NON SUPERATO"}
-                          </Badge>
                         </div>
-                      </div>
                     ))}
                   </div>
                 )}
@@ -671,26 +676,26 @@ export default function SimulatoreEsameSAF() {
                 ) : (
                   <div className="w-full max-w-2xl space-y-10">
                     <div className="text-center text-xs font-black tracking-widest text-slate-300 uppercase">Quesito {fcIndex + 1} di {fcDeck.length}</div>
-                    <motion.div 
-                      key={`${fcIndex}-${fcFlipped}`}
-                      initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
-                      onClick={() => setFcFlipped(!fcFlipped)}
-                      className={`relative w-full cursor-pointer h-64 rounded-[2rem] border-2 transition-all p-10 flex flex-col items-center justify-center text-center gap-6 ${fcFlipped ? "bg-emerald-50 border-emerald-200 shadow-2xl shadow-emerald-100/50" : "bg-indigo-50 border-indigo-200 shadow-2xl shadow-indigo-100/50"}`}
-                    >
-                      {!fcFlipped ? (
-                        <>
-                          <Badge className="absolute top-6 bg-indigo-500/10 text-indigo-600 border-indigo-200 px-3 py-1 font-black rounded-full uppercase text-[10px] tracking-widest">{fcDeck[fcIndex].area}</Badge>
-                          <div className="text-xl md:text-2xl font-bold text-slate-800 leading-tight">{fcDeck[fcIndex].text}</div>
-                          <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs mt-4 uppercase tracking-widest shadow-sm"><RotateCcw className="h-4 w-4" /> Tocca per la risposta</div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-2">Risposta Corretta</div>
-                          <div className="text-3xl md:text-4xl font-black text-emerald-800">{fcDeck[fcIndex].correct}</div>
-                          {fcDeck[fcIndex].explanation && <div className="text-slate-600 text-sm md:text-base mt-4 max-w-md mx-auto italic">"{fcDeck[fcIndex].explanation}"</div>}
-                        </>
-                      )}
-                    </motion.div>
+                      <motion.div 
+                        key={`${fcIndex}-${fcFlipped}`}
+                        initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
+                        onClick={() => setFcFlipped(!fcFlipped)}
+                        className={`relative w-full cursor-pointer h-56 md:h-72 rounded-[1.5rem] md:rounded-[2rem] border-2 transition-all p-6 md:p-10 flex flex-col items-center justify-center text-center gap-4 md:gap-6 ${fcFlipped ? "bg-emerald-50 border-emerald-200 shadow-2xl shadow-emerald-100/50" : "bg-indigo-50 border-indigo-200 shadow-2xl shadow-indigo-100/50"}`}
+                      >
+                        {!fcFlipped ? (
+                          <>
+                            <Badge className="absolute top-4 md:top-6 bg-indigo-500/10 text-indigo-600 border-indigo-200 px-3 py-1 font-black rounded-full uppercase text-[9px] md:text-[10px] tracking-widest">{fcDeck[fcIndex].area}</Badge>
+                            <div className="text-lg md:text-2xl font-bold text-slate-800 leading-tight">{fcDeck[fcIndex].text}</div>
+                            <div className="flex items-center gap-2 text-indigo-400 font-bold text-[10px] md:text-sm mt-2 md:mt-4 uppercase tracking-widest shadow-sm"><RotateCcw className="h-4 w-4" /> Tocca per la risposta</div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1 md:mb-2">Risposta Corretta</div>
+                            <div className="text-2xl md:text-4xl font-black text-emerald-800">{fcDeck[fcIndex].correct}</div>
+                            {fcDeck[fcIndex].explanation && <div className="text-slate-600 text-xs md:text-base mt-2 md:mt-4 max-w-md mx-auto italic">"{fcDeck[fcIndex].explanation}"</div>}
+                          </>
+                        )}
+                      </motion.div>
                     <div className="flex gap-4 justify-center">
                       <Button variant="outline" size="lg" className="rounded-2xl border-slate-200 text-slate-600" onClick={() => { setFcIndex(prev => Math.max(0, prev - 1)); setFcFlipped(false); }} disabled={fcIndex === 0}><ChevronLeft className="h-6 w-6" /></Button>
                       <Button variant="outline" size="lg" className="rounded-2xl font-black text-indigo-600 border-indigo-200 px-10" onClick={() => setFcFlipped(!fcFlipped)}>GIRA</Button>
@@ -881,44 +886,44 @@ export default function SimulatoreEsameSAF() {
                     <Button size="xl" className="w-full rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 h-16 text-xl font-bold shadow-xl shadow-indigo-200 group relative overflow-hidden" onClick={startGlobalMode}>
                       <Zap className="mr-3 h-6 w-6 text-amber-300" /> Avvia Sfida Globale (Timer)
                     </Button>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                      {ALL_AREAS.map(area => (
-                        <button key={area.key} onClick={() => startQuickPick(area.key)} className="flex flex-col items-center justify-center p-3 rounded-xl border-2 border-slate-100 bg-white hover:border-indigo-400 hover:shadow-md transition-all text-center group">
-                          <span className="text-[10px] font-black text-indigo-500 uppercase tracking-tighter mb-1">{area.doc}</span>
-                          <span className="text-[11px] font-bold text-slate-700 leading-tight">{area.label}</span>
-                        </button>
-                      ))}
+                    <div className="grid gap-3 grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pt-2">
+                       {ALL_AREAS.map(area => (
+                         <button key={area.key} onClick={() => startQuickPick(area.key)} className="flex flex-col items-center justify-center p-2 md:p-3 rounded-xl border-2 border-slate-100 bg-white hover:border-indigo-400 hover:shadow-md transition-all text-center group">
+                           <span className="text-[9px] md:text-[10px] font-black text-indigo-500 uppercase tracking-tighter mb-0.5 md:mb-1">{area.doc}</span>
+                           <span className="text-[10px] md:text-[11px] font-bold text-slate-700 leading-tight line-clamp-1">{area.label}</span>
+                         </button>
+                       ))}
                     </div>
                   </div>
                 )}
 
-                <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-[auto_auto_auto_auto_1fr] items-center">
-                  <Button className="rounded-xl shadow-sm border border-slate-200 h-12 bg-white" onClick={() => startConfiguredMode("study", "all")} variant={sessionMode === "study" ? "default" : "secondary"}><BookOpen className="mr-2 h-4 w-4" /> Studio Base</Button>
-                  <Button className="rounded-xl shadow-sm border border-slate-200 h-12 bg-white" onClick={() => startConfiguredMode("exam_medium", "medium")} variant={sessionMode === "exam_medium" ? "default" : "secondary"}><Play className="mr-2 h-4 w-4" /> Simulazione Media</Button>
-                  <Button className="rounded-xl shadow-sm border border-indigo-200 h-12 bg-indigo-50 text-indigo-700 hover:bg-indigo-100" onClick={() => startConfiguredMode("exam_mix", "all")}><Layers3 className="mr-2 h-4 w-4" /> Test Ufficiale Totale</Button>
-                  <Button className="rounded-xl shadow-sm border border-rose-200 h-12 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold" onClick={() => startConfiguredMode("exam_survival", "all")}><Flame className="mr-2 h-4 w-4" /> Morte Improvvisa (10s)</Button>
+                <div className="grid gap-2 md:gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center">
+                  <Button className="rounded-xl shadow-sm border border-slate-200 h-10 md:h-12 bg-white text-xs md:text-sm" onClick={() => startConfiguredMode("study", "all")} variant={sessionMode === "study" ? "default" : "secondary"}><BookOpen className="mr-2 h-4 w-4" /> Studio Base</Button>
+                  <Button className="rounded-xl shadow-sm border border-slate-200 h-10 md:h-12 bg-white text-xs md:text-sm" onClick={() => startConfiguredMode("exam_medium", "medium")} variant={sessionMode === "exam_medium" ? "default" : "secondary"}><Play className="mr-2 h-4 w-4" /> Simulazione Media</Button>
+                  <Button className="rounded-xl shadow-sm border border-indigo-200 h-10 md:h-12 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 text-xs md:text-sm" onClick={() => startConfiguredMode("exam_mix", "all")}><Layers3 className="mr-2 h-4 w-4" /> Test Ufficiale Totale</Button>
+                  <Button className="rounded-xl shadow-sm border border-rose-200 h-10 md:h-12 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold text-xs md:text-sm" onClick={() => startConfiguredMode("exam_survival", "all")}><Flame className="mr-2 h-4 w-4" /> Morte Improvvisa</Button>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 pt-2">
+                <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 pt-2">
                   <StatCard title="Batteria" value={questions.length} icon={ShieldAlert} accent={sessionMode === "exam_survival" ? "danger" : "indigo"} />
-                  <StatCard title="Avanzamento" value={totalAnswered} icon={CheckCircle2} accent="default" />
+                  <StatCard title="Fornite" value={totalAnswered} icon={CheckCircle2} accent="default" />
                   <StatCard title="Punteggio" value={submitted || sessionMode === "study" || settings.immediateFeedback ? `${score}` : "—"} icon={Trophy} accent={submitted ? (passed ? "success" : "danger") : "default"} />
                   <StatCard 
-                    title={sessionMode === "exam_survival" ? "Timer Domanda" : "Tempo Residuo"} 
-                    value={sessionMode === "study" ? "Inattivo" : (paused ? "IN PAUSA" : formatTime(seconds))} 
+                    title={sessionMode === "exam_survival" ? "Timer" : "Tempo"} 
+                    value={sessionMode === "study" ? "Studio" : (paused ? "PAUSA" : formatTime(seconds))} 
                     icon={sessionMode === "exam_survival" ? Zap : Clock3} 
                     accent={sessionMode === "exam_survival" || (configObj.seconds && seconds < 60) ? "danger" : "default"}
                     extraAction={
                       running && !submitted && sessionMode !== "study" && sessionMode !== "exam_survival" ? (
                         <div className="cursor-pointer rounded-full p-2 bg-slate-800 text-white hover:bg-slate-700 shadow-md" onClick={() => setPaused(!paused)}>
-                          {paused ? <PlayCircle className="h-5 w-5" /> : <PauseCircle className="h-5 w-5" />}
+                          {paused ? <PlayCircle className="h-4 w-4 md:h-5 md:w-5" /> : <PauseCircle className="h-4 w-4 md:h-5 md:w-5" />}
                         </div>
                       ) : null
                     }
                   />
                 </div>
 
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 mt-2">
+                <div className="bg-slate-50 p-3 md:p-4 rounded-xl border border-slate-100 mt-2">
                   <Progress value={progress} className="h-1.5 rounded-full bg-slate-200" />
                 </div>
               </CardContent>
@@ -946,24 +951,28 @@ export default function SimulatoreEsameSAF() {
 
             <div className="grid gap-8 lg:grid-cols-[300px_minmax(0,1fr)] items-start print:hidden">
               
-              {/* === PROGRESS SIDE NAVIGATION === */}
-              <motion.div initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="sticky top-6 hidden lg:block">
-                <Card className="border-slate-200 shadow-md rounded-3xl bg-white overflow-hidden">
-                  <CardContent className="p-5 space-y-4 pt-6">
-                    <div className="grid grid-cols-5 gap-2">
+              {/* === PROGRESS NAVIGATION === */}
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="lg:sticky lg:top-6">
+                <Card className="border-slate-200 shadow-md rounded-2xl md:rounded-3xl bg-white overflow-hidden">
+                  <CardContent className="p-3 md:p-5">
+                    {/* Desktop/Tablet Grid OR Mobile Scrollable Row */}
+                    <div className="flex lg:grid lg:grid-cols-5 gap-2 overflow-x-auto pb-2 lg:pb-0 no-scrollbar">
                       {questions.map((q, index) => {
                         const status = getQuestionStatus(q);
                         const statusClass = {
                           idle: "bg-slate-50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:text-slate-600",
                           answered: "bg-indigo-50 border-indigo-300 text-indigo-700 font-bold",
-                          correct: "bg-emerald-50 border-emerald-400 text-emerald-700 font-bold shadow-sm shadow-emerald-100",
-                          wrong: "bg-rose-50 border-rose-400 text-rose-700 font-bold shadow-sm shadow-rose-100",
+                          correct: "bg-emerald-50 border-emerald-400 text-emerald-700 font-bold",
+                          wrong: "bg-rose-50 border-rose-400 text-rose-700 font-bold",
                         }[status];
                         return (
                           <button 
                             key={q.id} disabled={sessionMode === "exam_survival"}
-                            onClick={() => setCurrentIndex(index)} 
-                            className={`h-10 w-full rounded-xl text-sm border transition-all ${statusClass} ${currentIndex === index ? "ring-4 ring-indigo-200 scale-110 shadow-lg" : ""} ${sessionMode === "exam_survival" ? "opacity-50 cursor-not-allowed" : ""}`}
+                            onClick={() => {
+                              setCurrentIndex(index);
+                              // Su mobile, scrolla il tasto al centro se cliccato (opzionale)
+                            }} 
+                            className={`min-w-[40px] h-10 lg:w-full rounded-xl text-xs md:text-sm border transition-all shrink-0 ${statusClass} ${currentIndex === index ? "ring-2 md:ring-4 ring-indigo-200 scale-105 shadow-md z-10" : ""} ${sessionMode === "exam_survival" ? "opacity-50 cursor-not-allowed" : ""}`}
                           >
                             {index + 1}
                           </button>
@@ -987,13 +996,12 @@ export default function SimulatoreEsameSAF() {
                     </motion.div>
                   ) : currentQuestion ? (
                     <motion.div key={currentQuestion.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.2 }}>
-                      <Card className={`border-slate-200 shadow-xl rounded-[2rem] bg-white overflow-hidden`}>
-                        <CardHeader className="bg-slate-50/70 border-b border-slate-100 p-6 md:p-8">
-                          <div className="flex flex-col gap-5">
+                        <CardHeader className="bg-slate-50/70 border-b border-slate-100 p-5 md:p-8">
+                          <div className="flex flex-col gap-4 md:gap-5">
                             <div className="flex flex-wrap items-center gap-2">
-                              <Badge className="rounded-md bg-slate-800 text-white font-bold tracking-wider px-3 py-1">Quesito {currentIndex + 1}</Badge>
-                              <Badge className="rounded-md bg-slate-200 text-slate-800 border-none px-3 py-1">{currentQuestion.area}</Badge>
-                              <Badge className="rounded-md bg-indigo-100 text-indigo-800 border-none px-3 py-1">{currentQuestion.difficulty}</Badge>
+                              <Badge className="rounded-md bg-slate-800 text-white font-bold tracking-wider px-2 md:px-3 py-1 text-[10px] md:text-xs">Quesito {currentIndex + 1}</Badge>
+                              <Badge className="rounded-md bg-slate-200 text-slate-800 border-none px-2 md:px-3 py-1 text-[10px] md:text-xs truncate max-w-[100px] md:max-w-none">{currentQuestion.area}</Badge>
+                              <Badge className="rounded-md bg-indigo-100 text-indigo-800 border-none px-2 md:px-3 py-1 text-[10px] md:text-xs">{currentQuestion.difficulty}</Badge>
                               
                               {settings.ttsEnabled && (
                                 <Button variant="ghost" size="sm" onClick={() => speakText(currentQuestion.text)} className="ml-auto rounded-full w-8 h-8 p-0 bg-indigo-50 text-indigo-600 hover:bg-indigo-100">
@@ -1001,19 +1009,19 @@ export default function SimulatoreEsameSAF() {
                                 </Button>
                               )}
                             </div>
-                            <CardTitle className="text-xl md:text-2xl font-extrabold text-slate-800 leading-[1.4]">
+                            <CardTitle className="text-lg md:text-2xl font-extrabold text-slate-800 leading-snug md:leading-[1.4]">
                               {currentQuestion.text}
                             </CardTitle>
                           </div>
                         </CardHeader>
 
                         <CardContent className="p-6 md:p-8 space-y-4">
-                          <div className="flex flex-col gap-4">
+                          <div className="flex flex-col gap-3 md:gap-4">
                             {currentQuestion.options?.map((option, idx) => {
                               const isSelected = answers[currentQuestion.id] === option;
                               const isCorrect = option === currentQuestion.correct;
                               let showCorrection = (sessionMode === "study" && answers[currentQuestion.id]) || settings.immediateFeedback && answers[currentQuestion.id] || submitted;
-                              if (sessionMode === "exam_survival") showCorrection = submitted; // hide until fail/win
+                              if (sessionMode === "exam_survival") showCorrection = submitted; 
                               
                               let bgClasses = "bg-white border-slate-200 hover:bg-slate-50 hover:border-indigo-300";
                               let textClasses = "text-slate-700";
@@ -1023,19 +1031,19 @@ export default function SimulatoreEsameSAF() {
                               if (isSelected) {
                                 bgClasses = "bg-indigo-50 border-indigo-400";
                                 textClasses = "text-indigo-900";
-                                ringString = "ring-4 ring-indigo-500/10";
+                                ringString = "ring-2 md:ring-4 ring-indigo-500/10";
                               }
                               
                               if (showCorrection) {
                                 if (isCorrect) {
                                     bgClasses = "bg-emerald-50 border-emerald-500";
                                     textClasses = "text-emerald-900";
-                                    ringString = isSelected ? "ring-4 ring-emerald-500/20" : "";
-                                    iconRender = <CheckCircle2 className="h-6 w-6 text-emerald-500 shrink-0" />;
+                                    ringString = isSelected ? "ring-2 md:ring-4 ring-emerald-500/20" : "";
+                                    iconRender = <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-emerald-500 shrink-0" />;
                                 } else if (isSelected && !isCorrect) {
                                     bgClasses = "bg-rose-50 border-rose-400";
                                     textClasses = "text-rose-900";
-                                    iconRender = <XCircle className="h-6 w-6 text-rose-500 shrink-0" />;
+                                    iconRender = <XCircle className="h-5 w-5 md:h-6 md:w-6 text-rose-500 shrink-0" />;
                                 } else { bgClasses += " opacity-50"; }
                               }
 
@@ -1044,10 +1052,10 @@ export default function SimulatoreEsameSAF() {
                               if (option === "Falso") shortcutTrigger = "F";
                               
                               return (
-                                <motion.div key={idx} whileHover={{ scale: showCorrection && sessionMode !== "study" ? 1 : 1.01 }} whileTap={{ scale: showCorrection && sessionMode !== "study" ? 1 : 0.99 }}>
-                                  <button onClick={() => handleAnswer(currentQuestion.id, option)} disabled={showCorrection && sessionMode !== "study"} className={`w-full text-left p-4 md:p-5 min-h-[4.5rem] rounded-2xl border-2 flex items-center gap-4 transition-all duration-200 shadow-sm ${bgClasses} ${textClasses} ${ringString} ${showCorrection && sessionMode !== "study" ? "cursor-default" : "cursor-pointer"}`}>
-                                    <div className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm shadow-sm ${isSelected && !showCorrection ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 border border-slate-200'}`}>{shortcutTrigger}</div>
-                                    <span className="flex-1 text-[15px] md:text-[17px] font-medium leading-relaxed">{option}</span>
+                                <motion.div key={idx}>
+                                  <button onClick={() => handleAnswer(currentQuestion.id, option)} disabled={showCorrection && sessionMode !== "study"} className={`w-full text-left p-3 md:p-5 min-h-[3.5rem] md:min-h-[4.5rem] rounded-xl md:rounded-2xl border-2 flex items-center gap-3 md:gap-4 transition-all duration-200 shadow-sm ${bgClasses} ${textClasses} ${ringString} ${showCorrection && sessionMode !== "study" ? "cursor-default" : "cursor-pointer"}`}>
+                                    <div className={`w-6 h-6 md:w-8 md:h-8 shrink-0 rounded-lg flex items-center justify-center font-bold text-[10px] md:text-sm shadow-sm ${isSelected && !showCorrection ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500 border border-slate-200'}`}>{shortcutTrigger}</div>
+                                    <span className="flex-1 text-sm md:text-[17px] font-medium leading-relaxed">{option}</span>
                                     {iconRender}
                                   </button>
                                 </motion.div>
@@ -1127,11 +1135,50 @@ export default function SimulatoreEsameSAF() {
                 )}
                 
                 {/* Modali di consegna */}
-                {!submitted && sessionMode !== "study" && sessionMode !== "exam_survival" && !paused && (
-                  <div className="fixed sm:sticky bottom-0 left-0 right-0 p-4 sm:p-0 z-40">
-                    <Card className="border-indigo-200 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] rounded-3xl bg-white/95 backdrop-blur flex flex-col md:flex-row items-center justify-between p-4 gap-4">
-                       <span className="font-semibold text-slate-600 ml-2">{totalAnswered} / {questions.length} risposte fornite</span>
-                       <Button size="lg" onClick={performSubmit} className="rounded-xl px-10 bg-slate-900 hover:bg-slate-800 text-white font-bold h-12 w-full md:w-auto">Consegna Test</Button>
+                {/* Persistent Navigation Footer (Mobile & Desktop) */}
+                {!submitted && !paused && sessionMode !== "exam_survival" && (
+                  <div className="fixed lg:sticky bottom-0 left-0 right-0 p-3 md:py-4 md:px-0 z-40 bg-gradient-to-t from-slate-100/80 to-transparent">
+                    <Card className="border-indigo-200 shadow-2xl rounded-2xl md:rounded-3xl bg-white/95 backdrop-blur flex items-center justify-between p-2 md:p-4 gap-2">
+                       <div className="flex items-center gap-1 md:gap-2">
+                         <Button 
+                           variant="outline" 
+                           size="icon" 
+                           className="h-10 w-10 md:h-12 md:w-12 rounded-xl border-slate-200" 
+                           onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} 
+                           disabled={currentIndex === 0}
+                         >
+                           <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                         </Button>
+                         <div className="px-3 md:px-4 py-2 bg-slate-50 rounded-xl border border-slate-100">
+                           <span className="font-black text-xs md:text-base text-slate-700">{currentIndex + 1} <span className="text-slate-400 font-medium">/ {questions.length}</span></span>
+                         </div>
+                         <Button 
+                           variant="outline" 
+                           size="icon" 
+                           className="h-10 w-10 md:h-12 md:w-12 rounded-xl border-slate-200" 
+                           onClick={() => setCurrentIndex(prev => Math.min(questions.length - 1, prev + 1))} 
+                           disabled={currentIndex === questions.length - 1}
+                         >
+                           <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                         </Button>
+                       </div>
+
+                       <div className="flex items-center gap-2 flex-1 justify-end">
+                         {sessionMode !== "study" && (
+                           <Button 
+                             onClick={performSubmit} 
+                             className="rounded-xl px-4 md:px-10 bg-slate-900 hover:bg-slate-800 text-white font-bold h-10 md:h-12 text-xs md:text-base shadow-lg"
+                           >
+                             Consegna <span className="hidden sm:inline ml-1">Test</span>
+                           </Button>
+                         )}
+                         {sessionMode === "study" && (
+                           <div className="hidden sm:flex flex-col text-right">
+                             <span className="text-[10px] font-black uppercase text-indigo-500">Modalità</span>
+                             <span className="text-xs font-bold text-slate-600">Apprendimento</span>
+                           </div>
+                         )}
+                       </div>
                     </Card>
                   </div>
                 )}
