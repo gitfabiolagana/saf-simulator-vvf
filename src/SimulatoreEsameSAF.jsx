@@ -996,6 +996,7 @@ export default function SimulatoreEsameSAF() {
                     </motion.div>
                   ) : currentQuestion ? (
                     <motion.div key={currentQuestion.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.2 }}>
+                      <Card className="border-slate-200 shadow-xl rounded-[2rem] bg-white overflow-hidden">
                         <CardHeader className="bg-slate-50/70 border-b border-slate-100 p-5 md:p-8">
                           <div className="flex flex-col gap-4 md:gap-5">
                             <div className="flex flex-wrap items-center gap-2">
@@ -1136,46 +1137,52 @@ export default function SimulatoreEsameSAF() {
                 
                 {/* Modali di consegna */}
                 {/* Persistent Navigation Footer (Mobile & Desktop) */}
+                {/* Persistent Navigation Footer (Fixed at bottom on Mobile) */}
                 {!submitted && !paused && sessionMode !== "exam_survival" && (
-                  <div className="fixed lg:sticky bottom-0 left-0 right-0 p-3 md:py-4 md:px-0 z-40 bg-gradient-to-t from-slate-100/80 to-transparent">
-                    <Card className="border-indigo-200 shadow-2xl rounded-2xl md:rounded-3xl bg-white/95 backdrop-blur flex items-center justify-between p-2 md:p-4 gap-2">
-                       <div className="flex items-center gap-1 md:gap-2">
+                  <div className="fixed sm:sticky bottom-0 left-0 right-0 p-3 md:py-6 md:px-0 z-[100] bg-gradient-to-t from-white via-white/90 to-transparent">
+                    <Card className="border-indigo-100 shadow-[0_-10px_40px_-5px_rgba(0,0,0,0.1)] rounded-2xl md:rounded-3xl bg-white/98 backdrop-blur-md flex items-center justify-between p-3 md:p-4 gap-3 max-w-4xl mx-auto border-t-2">
+                       <div className="flex items-center gap-2 md:gap-4 shrink-0">
                          <Button 
                            variant="outline" 
                            size="icon" 
-                           className="h-10 w-10 md:h-12 md:w-12 rounded-xl border-slate-200" 
+                           className="h-12 w-12 md:h-14 md:w-14 rounded-2xl border-slate-200 bg-white hover:bg-slate-50 hover:text-indigo-600 transition-all active:scale-95" 
                            onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} 
                            disabled={currentIndex === 0}
                          >
-                           <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                           <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
                          </Button>
-                         <div className="px-3 md:px-4 py-2 bg-slate-50 rounded-xl border border-slate-100">
-                           <span className="font-black text-xs md:text-base text-slate-700">{currentIndex + 1} <span className="text-slate-400 font-medium">/ {questions.length}</span></span>
+                         
+                         <div className="flex flex-col items-center px-4 py-2 bg-indigo-50/50 rounded-2xl border border-indigo-100 min-w-[70px]">
+                           <span className="text-[10px] font-black uppercase text-indigo-400 leading-none mb-1">Domanda</span>
+                           <span className="font-black text-lg md:text-xl text-indigo-700 leading-none">{currentIndex + 1} <span className="text-indigo-300 font-medium text-xs md:text-sm">/ {questions.length}</span></span>
                          </div>
+
                          <Button 
                            variant="outline" 
                            size="icon" 
-                           className="h-10 w-10 md:h-12 md:w-12 rounded-xl border-slate-200" 
+                           className="h-12 w-12 md:h-14 md:w-14 rounded-2xl border-indigo-200 bg-white text-indigo-600 hover:bg-indigo-50 transition-all active:scale-95" 
                            onClick={() => setCurrentIndex(prev => Math.min(questions.length - 1, prev + 1))} 
                            disabled={currentIndex === questions.length - 1}
                          >
-                           <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                           <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
                          </Button>
                        </div>
 
-                       <div className="flex items-center gap-2 flex-1 justify-end">
-                         {sessionMode !== "study" && (
+                       <div className="flex items-center gap-3 flex-1 justify-end">
+                         {sessionMode !== "study" ? (
                            <Button 
                              onClick={performSubmit} 
-                             className="rounded-xl px-4 md:px-10 bg-slate-900 hover:bg-slate-800 text-white font-bold h-10 md:h-12 text-xs md:text-base shadow-lg"
+                             className="rounded-2xl px-6 md:px-12 bg-slate-900 hover:bg-black text-white font-black h-12 md:h-14 text-sm md:text-base shadow-xl shadow-slate-200 transition-all hover:scale-105 active:scale-95"
                            >
-                             Consegna <span className="hidden sm:inline ml-1">Test</span>
+                             CONSEGNA <span className="hidden sm:inline ml-1">ADESSO</span>
                            </Button>
-                         )}
-                         {sessionMode === "study" && (
-                           <div className="hidden sm:flex flex-col text-right">
-                             <span className="text-[10px] font-black uppercase text-indigo-500">Modalità</span>
-                             <span className="text-xs font-bold text-slate-600">Apprendimento</span>
+                         ) : (
+                           <div className="flex flex-col text-right pr-2">
+                             <div className="flex items-center gap-2 text-indigo-500 justify-end">
+                               <BookOpen className="h-4 w-4" />
+                               <span className="text-[10px] font-black uppercase tracking-widest">Modalità Studio</span>
+                             </div>
+                             <span className="text-xs font-bold text-slate-500">Scorri per navigare</span>
                            </div>
                          )}
                        </div>
