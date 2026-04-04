@@ -193,8 +193,8 @@ export default function SimulatoreEsameSAF() {
   }, []);
 
   React.useEffect(() => {
-    // Auto-scroll to top when question changes on mobile
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Il focus e la posizione di scorrimento rimangono invariati
+    // come richiesto dall'utente. Nessuno scroll automatico all'inizio della pagina.
   }, [currentIndex]);
 
   function saveNote() {

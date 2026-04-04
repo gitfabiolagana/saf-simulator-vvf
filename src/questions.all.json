@@ -5,7 +5,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Pericolo = evento che genera un potenziale danno.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Definizione esatta dal Modulo 2 – Analisi e Valutazione dei Rischi: 'Per pericolo si intende qualsiasi evento che genera un possibile danno.'"
   },
@@ -15,7 +18,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Il rischio è espresso dalla formula RISCHIO = F × M dove F = frequenza dell'accadimento e M = magnitudo del danno.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Formula citata sul manuale: 'RISCHIO = F × M'. Tanto più sono elevati F ed M, tanto più sarà elevato il Rischio."
   },
@@ -25,7 +31,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "La corda semistatica standard deve avere un diametro compreso tra 10,5 e 11 mm.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Specificato nel Modulo 4 per la corda semistatica tipo A: 'corda semistatica da 10,5-11 mm di diametro'."
   },
@@ -35,7 +44,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "I connettori asimmetrici in lega devono avere la ghiera di sicurezza in materiale plastico.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Il Modulo 4 specifica esplicitamente: 'la ghiera di sicurezza deve essere in materiale metallico, non in plastica.'"
   },
@@ -45,7 +57,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "La corda semistatica certificata EN1891 tipo A è costruita in fibra di poliammide.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Dati costruttivi riportati nel Modulo 4: 'costruita in fibra di poliammide; anima interna a trefoli e guaina di rivestimento'."
   },
@@ -55,7 +70,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "L'angolo formato dai due rami esterni di un ancoraggio non deve mai superare un'ampiezza di 90°.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Dal Modulo 5: 'L'angolo formato dai due rami esterni di un ancoraggio non deve mai superare un'ampiezza di 90°. Oltre questo limite, la distribuzione del carico sui punti di attacco diventa svantaggiosa.'"
   },
@@ -65,7 +83,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Il funzionamento del nodo dipende dalla somma degli attriti che si sviluppano fra le parti delle corde poste a contatto.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'Il suo funzionamento dipende dalla somma degli attriti che si sviluppano fra le parti delle corde che vengono posti a contatto fra di esse, secondo criteri ben precisi.'"
   },
@@ -75,7 +96,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il nodo ad otto riduce il Carico di Rottura della corda di circa il 40%.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5, nota al nodo delle guide con frizione: 'Riduzione del C.R. della corda di circa il 40%.'"
   },
@@ -85,7 +109,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il nodo barcaiolo riduce il C.R. della corda solo del 30%.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 5: 'Riduzione del C.R. della corda di circa il 55% quando eseguito su un connettore di diametro ordinario.' È il nodo doppio inglese che lo riduce del 30%."
   },
@@ -95,7 +122,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il nodo delle guide con frizione (ad otto) non deve presentare accavallamenti delle spire.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'Il nodo non deve presentare accavallamenti delle spire ovvero i due rami di corda costituenti lo stesso devono presentarsi paralleli.'"
   },
@@ -105,7 +135,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "In un sistema di ancoraggio fisso, qualsiasi variazione della direzione di tiro non comporta alcuna anomalia nella distribuzione del carico.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 5: 'In un sistema di ancoraggio fisso, qualsiasi variazione della direzione di tiro comporta una cattiva distribuzione del carico sui vari punti di attacco.'"
   },
@@ -115,7 +148,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "Il sistema di ancoraggio variabile distribuisce uniformemente la sollecitazione anche se la direzione di tiro varia entro un certo angolo.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'Si definisce sistema di ancoraggio variabile quello che, sottoposto ad un carico, distribuisce la sollecitazione ricevuta in modo uguale fra tutti i punti di attacco utilizzati, anche se la direzione di tiro varia entro un certo angolo.'"
   },
@@ -125,7 +161,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Lo spezzone di fune aramidica del kit di assicurazione posizionamento deve essere di lunghezza pari a 15 metri.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4: 'Lo spezzone dovrà essere di lunghezza 15 metri e avere i capi cuciti idonei per inserire un connettore.'"
   },
@@ -135,7 +174,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il nodo mezzo barcaiolo deve essere sempre utilizzato come discensore principale per l'evacuazione.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 5: 'Non deve essere utilizzato come discensore principale.'"
   },
@@ -145,7 +187,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "La lunghezza minima dei capi liberi uscenti dai nodi non deve essere inferiore a 20 cm per corde di diametro 10-12 mm.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'L'indicazione pratica da seguire, vuole che la lunghezza minima dei capi sia di 20 cm. Per le corde di diametro compreso fra i 10 ed i 12 mm.'"
   },
@@ -155,7 +200,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "L'ancoraggio mobile ad anello in fettuccia deve avere lunghezza schiacciata di 60, 80 o 120 cm.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4: 'La lunghezza dell'anello schiacciato dovrà essere uguale a 60-80-120 cm e la larghezza non superiore a 3 cm.'"
   },
@@ -165,7 +213,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "L'imbracatura resistente al calore consente la sospensione dell'operatore con entrambe le mani libere.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4: 'sospensione durante il lavoro in altezza dell'operatore con entrambe le mani libere posizionato con o senza appoggio dei piedi.'"
   },
@@ -175,7 +226,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "L'asola di blocco del nodo mezzo barcaiolo deve essere lunga almeno 60 cm.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'L'asola deve essere lunga minimo 60 cm e comunque tale da permettere la realizzazione della contro asola che dovrà fuoriuscire dal nodo semplice di minimo 20 cm.'"
   },
@@ -185,7 +239,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Un connettore Tipo H EN 362 / EN 12275 è un moschettone asimmetrico a base larga.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4: classificazione 'tipo H' per il connettore asimmetrico a base larga certificato EN 362 ed EN 12275."
   },
@@ -195,7 +252,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "In caso di sospensione inerte (perdita di coscienza nel vuoto), l'operatore può sopravvivere in sicurezza per oltre 2 ore.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 2 – Patologia da Imbraco: 'ha un'aspettativa di sopravvivenza che, secondo i diversi autori, oscilla fra i quindici ed i trenta minuti.'"
   },
@@ -205,7 +265,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Per caduta dall'alto si intende la caduta da una quota posta ad un'altezza superiore a 2 metri rispetto ad un piano stabile.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 2: 'Per caduta dall'alto si intende: caduta da una quota posta ad un'altezza superiore a 2m rispetto ad un piano stabile.'"
   },
@@ -215,7 +278,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Si definisce ambiente ostile ogni luogo nel quale siano presenti condizioni ambientali tali da rendere pericoloso per gli esseri umani permanere ed operare.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 1: 'Si definisce ambiente ostile ogni luogo nel quale siano presenti condizioni ambientali tali, da rendere pericoloso per gli esseri umani permanere ed operare nello stesso.'"
   },
@@ -225,7 +291,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Un ambiente confinato è definito come un luogo all'interno del quale l'aria può essere non respirabile a causa di inquinamento fisico, chimico o biologico.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 1: 'Si definisce ambiente confinato, un luogo all'interno del quale l'aria può essere non respirabile, a causa di un inquinamento persistente di tipo fisico, chimico o biologico.'"
   },
@@ -235,7 +304,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La standardizzazione nelle manovre VVF non ha alcuna influenza sulla velocità di esecuzione delle operazioni.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 2: 'La standardizzazione consente di: Aumentare la velocità di esecuzione delle manovre; Effettuare sempre il controllo incrociato.'"
   },
@@ -245,7 +317,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La reversibilità dell'errore consente di strutturare tutte le azioni in modo da poter ripristinare le condizioni iniziali di un'operazione in qualsiasi fase.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 2: 'La reversibilità dell'errore consente di non effettuare manovre che conducono in un'area di pericolo dalla quale non si può tornare indietro... ovvero strutturare tutte le azioni in modo tale da prevedere, in qualsiasi fase, il ripristino delle condizioni iniziali.'"
   },
@@ -255,7 +330,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "L'unità di misura della forza nel Sistema Internazionale (SI) è il Newton, definito come 1N = 1 Kg m/s².",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 3: 'L'unità di misura della forza nel SI (Sistema Internazionale) è il Newton, definito come: 1 N = 1 Kg m/s².'"
   },
@@ -265,7 +343,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La forza d'arresto massima accettabile per un operatore, secondo le norme vigenti, è di 6 kN.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 3: 'Per portare ad un valore accettabile questa forza (max 6KN), è necessario interporre nella catena di assicurazione elementi cosiddetti assorbitori.'"
   },
@@ -275,7 +356,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "Con un angolo di 120° tra i due rami su un ancoraggio di rinvio, la sollecitazione risulta uguale al doppio del carico applicato.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 3: 'con angolo di 120° non vi è incremento di forza.' Il doppio del carico si ha con angolo prossimo a 0°."
   },
@@ -285,7 +369,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "Il fattore di caduta (Fc) è dato dal rapporto tra l'altezza della caduta libera (H) e la lunghezza del dispositivo di collegamento (L).",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 3: 'Fc = H/L — Fc = Fattore di Caduta — H = Altezza della caduta libera — L = Lunghezza del dispositivo di collegamento.'"
   },
@@ -295,7 +382,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "In fase operativa SAF l'obiettivo è non incorrere in un fattore di caduta Fc superiore a 0,3.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 3: 'L'obiettivo in fase operativa è quello di non incorrere in un fattore di caduta Fc superiore a 0,3.'"
   },
@@ -305,7 +395,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il Kit di assicurazione individuale deve essere indossato e collegato prima dell'arrivo sul posto delle operazioni.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5: 'Indossare l'imbracatura e collegare il kit prima dell'arrivo sul posto delle operazioni. Verificare, anche mediante un attento controllo incrociato, la corretta vestizione del kit.'"
   },
@@ -315,7 +408,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "L'utilizzo del Kit di assicurazione su scenari evolutivi (es. lavori sul tetto) non richiede una rivalutazione continua degli ancoraggi una volta impostati.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 5: 'L'utilizzo su scenari di tipo evolutivo (es. lavori sul tetto) deve prevedere una continua e costante rivalutazione degli ancoraggi, degli angoli di lavoro e dei punti di contatto della corda.'"
   },
@@ -325,7 +421,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La corda semistatica deve avere un carico di rottura nominale non inferiore a 28 kN.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Schede Tecniche Attrezzatura – Corda Semistatica N°03: 'Carico di rottura nominale: Non inferiore a 28 kN.'"
   },
@@ -335,7 +434,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La corda aramidica ha un carico di rottura nominale non inferiore a 25 kN.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Schede Tecniche Attrezzatura – Corda Aramidica N°05: 'Carico di rottura nominale: Non inferiore a 25 kN.'"
   },
@@ -345,7 +447,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il connettore asimmetrico in acciaio alto carico (N°10) deve avere un carico di rottura non inferiore a 22 kN.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Schede Tecniche N°10: 'Carico di rottura: Non inferiore a 35 kN.' È il connettore H asimmetrico in lega leggera (N°08) che ha 22 kN come carico minimo."
   },
@@ -355,7 +460,10 @@
     "difficulty": "Facile",
     "type": "vf",
     "text": "Il nodo gassa (gassa d'amante) deve essere obbligatoriamente completato da un contro nodo sul capo morto.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5 – Nodo gassa: 'Il capo di corda libero (capo morto) deve essere di lunghezza non inferiore a 30 cm e comunque è obbligatorio realizzare un contro nodo con il capo in uscita dal nodo - capo morto.'"
   },
@@ -365,7 +473,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il nodo machard può assolvere funzione di blocco bidirezionale o unidirezionale in funzione dell'impiego e della costruzione.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5 – Nodo machard: 'In funzione dell'impiego e della costruzione può assolvere alla funzione di blocco bidirezionale o unidirezionale.'"
   },
@@ -375,7 +486,10 @@
     "difficulty": "Difficile",
     "type": "vf",
     "text": "L'efficacia del blocco del nodo machard può diminuire significativamente se si impiegano corde bagnate, infangate o gelate.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 5 – Nodo machard Note: 'L'efficacia del blocco può diminuire significativamente se si impiegano corde bagnate, infangate, gelate.'"
   },
@@ -385,7 +499,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Il regolatore di discesa del Kit (EN 12841 classe C) deve avere dimensioni non superiori a 20x20 cm e peso non superiore a 550 g.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4 – Kit di assicurazione: 'dimensioni non superiori a 20 cm x 20 cm e peso non superiore ai 550 gr.'"
   },
@@ -395,7 +512,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "L'attrezzo discensore del kit deve funzionare anche con corde bagnate, ghiacciate o infangate.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 4: 'l'attrezzo dovrà essere in grado di funzionare con corde bagnate, ghiacciate o infangate.'"
   },
@@ -405,7 +525,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "Con un angolo di 90° su un ancoraggio di rinvio, la forza esercitata sull'ancoraggio risulta 1,5 volte il carico applicato.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Vero",
     "explanation": "Modulo 3 – Angoli e carichi: 'con angolo di 90° la forza esercitata sull'ancoraggio risulta uguale a 1,5 volte la forza esercitata.'"
   },
@@ -415,7 +538,10 @@
     "difficulty": "Media",
     "type": "vf",
     "text": "La corretta analisi rischi SAF si conclude quando l'operatore inizia la manovra di soccorso.",
-    "options": ["Vero", "Falso"],
+    "options": [
+      "Vero",
+      "Falso"
+    ],
     "correct": "Falso",
     "explanation": "Modulo 2: 'continua dovrà essere anche l'analisi del rischio, che terminerà solo quando l'area dell'intervento sarà dichiarata definitivamente sicura.'"
   },
@@ -425,7 +551,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è la riduzione del carico di rottura teorico della corda provocata dal nodo doppio inglese?",
-    "options": ["Riduzione del C.R. della corda di circa il 30%.", "Riduzione del C.R. della corda di circa il 40%.", "Riduzione del C.R. della corda di circa il 55%."],
+    "options": [
+      "Riduzione del C.R. della corda di circa il 55%.",
+      "Riduzione del C.R. della corda di circa il 40%.",
+      "Riduzione del C.R. della corda di circa il 30%."
+    ],
     "correct": "Riduzione del C.R. della corda di circa il 30%.",
     "explanation": "Modulo 5: 'Riduzione del C.R. della corda di circa il 30%.' L'otto ne riduce il 40%, il barcaiolo il 55%."
   },
@@ -435,7 +565,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è la riduzione del carico di rottura teorico provocata dal nodo barcaiolo su connettore di diametro ordinario?",
-    "options": ["Riduzione del C.R. della corda di circa il 55%.", "Riduzione del C.R. della corda di circa il 30%.", "Riduzione del C.R. della corda di circa il 40%."],
+    "options": [
+      "Riduzione del C.R. della corda di circa il 30%.",
+      "Riduzione del C.R. della corda di circa il 55%.",
+      "Riduzione del C.R. della corda di circa il 40%."
+    ],
     "correct": "Riduzione del C.R. della corda di circa il 55%.",
     "explanation": "Modulo 5: 'Riduzione del C.R. della corda di circa il 55% quando eseguito su un connettore di diametro ordinario.'"
   },
@@ -445,7 +579,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "Quanto deve essere lungo il capo libero (capo morto) per corde di diametro 10-12 mm?",
-    "options": ["La lunghezza minima dei capi sia di 20 cm.", "La lunghezza minima dei capi sia di 80 cm.", "La lunghezza minima dei capi sia di 10 mm."],
+    "options": [
+      "La lunghezza minima dei capi sia di 10 mm.",
+      "La lunghezza minima dei capi sia di 80 cm.",
+      "La lunghezza minima dei capi sia di 20 cm."
+    ],
     "correct": "La lunghezza minima dei capi sia di 20 cm.",
     "explanation": "Modulo 5: 'L'indicazione pratica da seguire, vuole che la lunghezza minima dei capi sia di 20 cm. Per le corde di diametro compreso fra i 10 ed i 12 mm.'"
   },
@@ -455,7 +593,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Quale fra questi connettori è idoneo all'abbinamento con una carrucola a flange fisse?",
-    "options": ["Forma parallela sui due assi (connettore tipo B).", "Connettore asimmetrico tipo H a base larga.", "Fettuccia ad anello chiuso su elemento di attacco dorsale."],
+    "options": [
+      "Connettore asimmetrico tipo H a base larga.",
+      "Forma parallela sui due assi (connettore tipo B).",
+      "Fettuccia ad anello chiuso su elemento di attacco dorsale."
+    ],
     "correct": "Forma parallela sui due assi (connettore tipo B).",
     "explanation": "Modulo 4: il connettore tipo B ha 'forma parallela sui due assi, tale da rendere idoneo l'abbinamento con una carrucola a flange fisse.'"
   },
@@ -465,7 +607,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "In quali scenari è indicato l'utilizzo dell'imbracatura resistente al calore secondo il Modulo Dotazioni?",
-    "options": ["Alto calore radiante, proiezioni di parti incandescenti e braci.", "Unicamente nei deflussi delle cisterne non ventilate.", "Durante l'aggancio del sistema regolatore su corde semistatiche ghiacciate."],
+    "options": [
+      "Alto calore radiante, proiezioni di parti incandescenti e braci.",
+      "Durante l'aggancio del sistema regolatore su corde semistatiche ghiacciate.",
+      "Unicamente nei deflussi delle cisterne non ventilate."
+    ],
     "correct": "Alto calore radiante, proiezioni di parti incandescenti e braci.",
     "explanation": "Modulo 4: 'utilizzo in presenza di rischi evolutivi comprendenti alte temperature quali fiamme in genere, calore radiante, calore per conduzione, proiezioni di parti incandescenti, presenza di braci, ecc.'"
   },
@@ -475,7 +621,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è il coefficiente trattenente del mezzo barcaiolo applicato al ramo carico (A)?",
-    "options": ["Coefficiente moltiplicatore circa 1:8.", "Distribuisce e riduce il carico di rottura nominale fino al 60%.", "Coefficiente variabile tra 1:2 e 1:4 su corda aramidica bagnata."],
+    "options": [
+      "Coefficiente variabile tra 1:2 e 1:4 su corda aramidica bagnata.",
+      "Coefficiente moltiplicatore circa 1:8.",
+      "Distribuisce e riduce il carico di rottura nominale fino al 60%."
+    ],
     "correct": "Coefficiente moltiplicatore circa 1:8.",
     "explanation": "Modulo 5: 'Consente con uno sforzo limitato di trattenere carichi elevati applicati al ramo carico (A) – coefficiente moltiplicatore circa 1:8.'"
   },
@@ -485,7 +635,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è la condizione per sbloccare il nodo mezzo barcaiolo chiuso con asola e controasola?",
-    "options": ["È possibile sbloccare agevolmente il sistema - anche in tensione - e ripristinare le condizioni iniziali.", "Mai, il blocco deve essere reciso tramite svincolo di emergenza meccanico.", "Solo su ancoraggio artificiale rimosso dalla pressione per sfilamento."],
+    "options": [
+      "Solo su ancoraggio artificiale rimosso dalla pressione per sfilamento.",
+      "Mai, il blocco deve essere reciso tramite svincolo di emergenza meccanico.",
+      "È possibile sbloccare agevolmente il sistema - anche in tensione - e ripristinare le condizioni iniziali."
+    ],
     "correct": "È possibile sbloccare agevolmente il sistema - anche in tensione - e ripristinare le condizioni iniziali.",
     "explanation": "Modulo 5: 'dopo il blocco è possibile sbloccare agevolmente il sistema - anche in tensione - e ripristinare le condizioni precedenti di manovra del mezzo barcaiolo.'"
   },
@@ -495,7 +649,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è lo svantaggio principale del sistema di ancoraggio fisso?",
-    "options": ["In caso di rottura, lo spezzone di corda che lo compone si sfila, causando la caduta del carico.", "La cattiva distribuzione del carico tra albero e clessidra in ambiente ipogeo.", "Il carico d'arresto non smorza gli urti tra i rami delle corde oltre 90°."],
+    "options": [
+      "La cattiva distribuzione del carico tra albero e clessidra in ambiente ipogeo.",
+      "Il carico d'arresto non smorza gli urti tra i rami delle corde oltre 90°.",
+      "In caso di rottura, lo spezzone di corda che lo compone si sfila, causando la caduta del carico."
+    ],
     "correct": "In caso di rottura, lo spezzone di corda che lo compone si sfila, causando la caduta del carico.",
     "explanation": "Modulo 5 – Tabella Vantaggi/Svantaggi: 'Svantaggi Variabile: In caso di rottura, lo spezzone di corda che lo compone si sfila, causando la caduta del carico.'"
   },
@@ -505,7 +663,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Qual è il vantaggio principale del sistema di ancoraggio variabile?",
-    "options": ["Possibilità di variare, entro un certo angolo, la direzione di tiro durante la manovra.", "Nessuna sollecitazione dinamica agli operatori in caso di rottura di un ramo di corda.", "Assicura un carico di rottura maggiore rispetto all'ancoraggio fisso a parità di materiale."],
+    "options": [
+      "Nessuna sollecitazione dinamica agli operatori in caso di rottura di un ramo di corda.",
+      "Possibilità di variare, entro un certo angolo, la direzione di tiro durante la manovra.",
+      "Assicura un carico di rottura maggiore rispetto all'ancoraggio fisso a parità di materiale."
+    ],
     "correct": "Possibilità di variare, entro un certo angolo, la direzione di tiro durante la manovra.",
     "explanation": "Modulo 5: 'Vantaggi Variabile: Possibilità di variare, entro un certo angolo, la direzione di tiro durante la manovra.'"
   },
@@ -515,7 +677,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "L'angolo tra i rami di un ancoraggio NON deve superare 90° perché:",
-    "options": ["La distribuzione del carico sui punti di attacco diventa svantaggiosa ed il carico su ognuno di essi può superare quello totale.", "Le corde potrebbero venire a contatto con superfici taglienti alterando la chiusura automatica a vite.", "Il calore prodotto attorno alle spire provocherebbe la rottura del barcaiolo per effetto nodo."],
+    "options": [
+      "Le corde potrebbero venire a contatto con superfici taglienti alterando la chiusura automatica a vite.",
+      "Il calore prodotto attorno alle spire provocherebbe la rottura del barcaiolo per effetto nodo.",
+      "La distribuzione del carico sui punti di attacco diventa svantaggiosa ed il carico su ognuno di essi può superare quello totale."
+    ],
     "correct": "La distribuzione del carico sui punti di attacco diventa svantaggiosa ed il carico su ognuno di essi può superare quello totale.",
     "explanation": "Modulo 5: 'la distribuzione del carico sui punti di attacco diventa svantaggiosa ed il carico applicato su ognuno di essi può arrivare a superare quello totale.'"
   },
@@ -525,7 +691,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "Qual è la composizione della sacca del Kit di assicurazione posizionamento?",
-    "options": ["Materiale tessile fiamma ritardante, chiudibile anteriormente tramite velcro e con due agganci posteriori.", "Sacca in poliammide-poliestere stagna da 60 litri dimensionata a carichi oltre 28 kN.", "In materiale plastico metallico con doppia patella per alloggiamento delle bretelle."],
+    "options": [
+      "In materiale plastico metallico con doppia patella per alloggiamento delle bretelle.",
+      "Materiale tessile fiamma ritardante, chiudibile anteriormente tramite velcro e con due agganci posteriori.",
+      "Sacca in poliammide-poliestere stagna da 60 litri dimensionata a carichi oltre 28 kN."
+    ],
     "correct": "Materiale tessile fiamma ritardante, chiudibile anteriormente tramite velcro e con due agganci posteriori.",
     "explanation": "Modulo 4: 'sacca, rettangolare, in materiale tessile in materiale fiamma ritardante... dotata di patella di chiusura superiore chiudibile anteriormente tramite velcro e due agganci posteriori con chiusura in velcro.'"
   },
@@ -535,7 +705,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "La formula O.R.A. (Osserva-Rifletti-Agisci) descrive:",
-    "options": ["Lo schema comportamentale corretto per la corretta analisi e valutazione dei rischi sul campo.", "Le tre fasi del confezionamento del nodo ad otto per l'ancoraggio statico.", "Il protocollo di ripristino del nodo mezzo barcaiolo bloccato con asola in tensione."],
+    "options": [
+      "Le tre fasi del confezionamento del nodo ad otto per l'ancoraggio statico.",
+      "Lo schema comportamentale corretto per la corretta analisi e valutazione dei rischi sul campo.",
+      "Il protocollo di ripristino del nodo mezzo barcaiolo bloccato con asola in tensione."
+    ],
     "correct": "Lo schema comportamentale corretto per la corretta analisi e valutazione dei rischi sul campo.",
     "explanation": "Modulo 2: 'O.R.A. (osserva – rifletti – agisci): Osservare per rendersi conto della realtà incidentale; Riflettere per decidere la procedura operativa; Agire con rapidità ma senza fretta.'"
   },
@@ -545,7 +719,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "Quali sono i tre pilastri su cui si fonda la sicurezza nelle manovre dei Vigili del Fuoco SAF?",
-    "options": ["Standardizzazione, Reversibilità dell'errore, Vincoli fisici.", "Analisi del rischio, Velocità di esecuzione, Controllo incrociato.", "Conoscenza dei materiali, Resistenza fisica, Autonomia operativa."],
+    "options": [
+      "Standardizzazione, Reversibilità dell'errore, Vincoli fisici.",
+      "Conoscenza dei materiali, Resistenza fisica, Autonomia operativa.",
+      "Analisi del rischio, Velocità di esecuzione, Controllo incrociato."
+    ],
     "correct": "Standardizzazione, Reversibilità dell'errore, Vincoli fisici.",
     "explanation": "Modulo 2: 'I pilastri su cui si fonda la sicurezza nelle manovre dei Vigili del Fuoco sono: 1) Standardizzazione, 2) Reversibilità dell'errore, 3) Vincoli fisici.'"
   },
@@ -555,7 +733,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Quale tra i seguenti è identificato come RISCHIO PREVALENTE nell'attività SAF?",
-    "options": ["Caduta dall'alto e sospensione inerte su imbracatura.", "Cedimenti strutturali e caduta di oggetti dall'alto.", "Esposizione a folgorazione e innesco di incendio."],
+    "options": [
+      "Cedimenti strutturali e caduta di oggetti dall'alto.",
+      "Esposizione a folgorazione e innesco di incendio.",
+      "Caduta dall'alto e sospensione inerte su imbracatura."
+    ],
     "correct": "Caduta dall'alto e sospensione inerte su imbracatura.",
     "explanation": "Modulo 2 cap. 2.2: 'Rischio prevalente: Caduta dall'alto; Sospensione inerte su imbracatura.' Gli altri (cedimenti, folgorazione, ecc.) sono rischi concorrenti."
   },
@@ -565,7 +747,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "Qual è la forza esercitata sull'ancoraggio di rinvio quando l'angolo tra i due rami è prossimo a 0°?",
-    "options": ["Il doppio del carico applicato (forza traente + forza resistente).", "Uguale al carico applicato (le due forze si equilibrano perfettamente).", "1,5 volte la forza applicata su ciascun ramo."],
+    "options": [
+      "Uguale al carico applicato (le due forze si equilibrano perfettamente).",
+      "Il doppio del carico applicato (forza traente + forza resistente).",
+      "1,5 volte la forza applicata su ciascun ramo."
+    ],
     "correct": "Il doppio del carico applicato (forza traente + forza resistente).",
     "explanation": "Modulo 3 – Angoli e Carichi: 'Nel caso di un angolo prossimo a 0°, ovvero quando i bracci della fune sono pressoché paralleli, la sollecitazione sull'ancoraggio di rinvio è il doppio del carico applicato.'"
   },
@@ -575,7 +761,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Nella catena di assicurazione, chi deve essere per definizione l'anello più debole?",
-    "options": ["L'operatore stesso.", "Il connettore di giunzione tra l'imbracatura e la corda.", "Il sistema di ancoraggio al punto di attacco."],
+    "options": [
+      "Il sistema di ancoraggio al punto di attacco.",
+      "Il connettore di giunzione tra l'imbracatura e la corda.",
+      "L'operatore stesso."
+    ],
     "correct": "L'operatore stesso.",
     "explanation": "Modulo 3: 'Tutti gli elementi che sono interposti tra il punto di attacco e l'operatore, questi ultimi compresi, si definiscono catena di assicurazione. Per definizione l'operatore dovrà essere l'anello debole di questa catena.'"
   },
@@ -585,7 +775,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "A quale norma deve essere conforme la corda semistatica usata nel kit VVF?",
-    "options": ["CE EN-1891 tipo A.", "CE EN-362 tipo H.", "CE EN-12841 classe C."],
+    "options": [
+      "CE EN-1891 tipo A.",
+      "CE EN-12841 classe C.",
+      "CE EN-362 tipo H."
+    ],
     "correct": "CE EN-1891 tipo A.",
     "explanation": "Modulo 4 e Schede Tecniche N°03: 'Dovrà essere certificata CE e conforme alla norma EN1891 ed in base ad essa classificata tipo A.'"
   },
@@ -595,7 +789,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "A quale norma CE deve essere conforme il regolatore di discesa (discensore) del Kit di assicurazione individuale?",
-    "options": ["CE EN 12841 classe C.", "CE EN 362 tipo H.", "CE EN 1891 tipo A."],
+    "options": [
+      "CE EN 1891 tipo A.",
+      "CE EN 12841 classe C.",
+      "CE EN 362 tipo H."
+    ],
     "correct": "CE EN 12841 classe C.",
     "explanation": "Modulo 4: 'un regolatore di fune a norma CE EN 12841 classe C realizzato nelle sue parti strutturali in lega leggera e acciaio.'"
   },
@@ -605,7 +803,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "La corda aramidica dello spezzone del Kit ha un'anima composta da quale materiale?",
-    "options": ["Poliammide-Poliestere.", "Acciaio inox con rivestimento tessile.", "Aramide al 100% in fibra corta."],
+    "options": [
+      "Poliammide-Poliestere.",
+      "Acciaio inox con rivestimento tessile.",
+      "Aramide al 100% in fibra corta."
+    ],
     "correct": "Poliammide-Poliestere.",
     "explanation": "Modulo 4: 'La corda composta da calza in materiale aramidico con percentuale di almeno il 40% e anima in Poliammide-Poliestere.'"
   },
@@ -615,7 +817,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "Quale comportamento è richiesto al soccorritore per garantire la sicurezza durante le manovre SAF?",
-    "options": ["Rimanere soggetto esterno alla crisi, valutarla e non diventarne parte integrante.", "Integrarsi nell'evento per analizzare meglio i rischi concorrenti in prima persona.", "Delegare la valutazione del rischio al caposquadra e seguire solo le istruzioni ricevute."],
+    "options": [
+      "Rimanere soggetto esterno alla crisi, valutarla e non diventarne parte integrante.",
+      "Delegare la valutazione del rischio al caposquadra e seguire solo le istruzioni ricevute.",
+      "Integrarsi nell'evento per analizzare meglio i rischi concorrenti in prima persona."
+    ],
     "correct": "Rimanere soggetto esterno alla crisi, valutarla e non diventarne parte integrante.",
     "explanation": "Modulo 2: 'Un soccorritore professionale deve sempre rimanere soggetto esterno alla crisi, per poterla valutare, gestire e risolvere.'"
   },
@@ -625,7 +831,11 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Quale classificazione degli ambienti ostili viene usata per una prima valutazione immediata del luogo di intervento?",
-    "options": ["Ambiente urbano, industriale, naturale, alluvionale.", "Ambiente confinato, aereo, ipogeo, subacqueo.", "Ambiente a bassa, media, alta e estrema ostilità."],
+    "options": [
+      "Ambiente a bassa, media, alta e estrema ostilità.",
+      "Ambiente confinato, aereo, ipogeo, subacqueo.",
+      "Ambiente urbano, industriale, naturale, alluvionale."
+    ],
     "correct": "Ambiente urbano, industriale, naturale, alluvionale.",
     "explanation": "Modulo 1/Modulo 2: 'Una classificazione degli ambienti potenzialmente ostili... è la seguente: Ambiente urbano; Ambiente industriale; Ambiente naturale; Ambiente alluvionale.'"
   },
@@ -635,7 +845,11 @@
     "difficulty": "Facile",
     "type": "multi",
     "text": "In quale classificazione rientrano i nodi cuore del sistema SAF, basandosi sulla funzione che svolgono?",
-    "options": ["Nodi di assicurazione statica/dinamica, di giunzione, autobloccanti.", "Nodi semplici, doppi, a cappio e terminali.", "Nodi di rinvio, di stop, a carico fisso e a carico variabile."],
+    "options": [
+      "Nodi di rinvio, di stop, a carico fisso e a carico variabile.",
+      "Nodi semplici, doppi, a cappio e terminali.",
+      "Nodi di assicurazione statica/dinamica, di giunzione, autobloccanti."
+    ],
     "correct": "Nodi di assicurazione statica/dinamica, di giunzione, autobloccanti.",
     "explanation": "Modulo 5: 'È possibile suddividere i nodi in: Nodi di assicurazione statica; Nodi di assicurazione dinamica; Nodi di giunzione; Nodi autobloccanti.'"
   },
@@ -645,7 +859,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "Qual è la caratteristica costruttiva del connettore parallelo tipo B che lo rende idoneo all'uso con carrucola a flange fisse?",
-    "options": ["La forma parallela sui due assi del moschettone.", "La ghiera di sicurezza in materiale metallico non in plastica.", "Il carico di rottura minimo di 35 kN in configurazione assiale."],
+    "options": [
+      "La ghiera di sicurezza in materiale metallico non in plastica.",
+      "Il carico di rottura minimo di 35 kN in configurazione assiale.",
+      "La forma parallela sui due assi del moschettone."
+    ],
     "correct": "La forma parallela sui due assi del moschettone.",
     "explanation": "Modulo 4: 'forma parallela sui due assi, tale da rendere idoneo l'abbinamento con una carrucola a flange fisse.'"
   },
@@ -655,7 +873,11 @@
     "difficulty": "Difficile",
     "type": "multi",
     "text": "Cosa intende il Modulo 3 con il termine 'tirante d'aria'?",
-    "options": ["La minima distanza da considerare tra l'operatore e un possibile punto d'impatto, per garantire l'incolumità in caso di caduta.", "La distanza massima operativa tra l'ancoraggio e l'imbracatura su sistemi di linea vita.", "Il margine di sicurezza minimo tra la corda e superfici abrasive durante la calata."],
+    "options": [
+      "La distanza massima operativa tra l'ancoraggio e l'imbracatura su sistemi di linea vita.",
+      "Il margine di sicurezza minimo tra la corda e superfici abrasive durante la calata.",
+      "La minima distanza da considerare tra l'operatore e un possibile punto d'impatto, per garantire l'incolumità in caso di caduta."
+    ],
     "correct": "La minima distanza da considerare tra l'operatore e un possibile punto d'impatto, per garantire l'incolumità in caso di caduta.",
     "explanation": "Modulo 3: 'Con la definizione tirante d'aria si intende la minima distanza da considerare tra l'operatore e un possibile punto d'impatto, in modo da garantire l'incolumità in caso di caduta.'"
   },
@@ -665,8 +887,190 @@
     "difficulty": "Media",
     "type": "multi",
     "text": "Quale effetto ha la corruzione delle spire di un nodo a monte sotto carico dell'utilizzatore?",
-    "options": ["Generano calore per attrito provocando la rottura della corda per fusione (effetto nodo).", "Aumentano la tenuta del nodo per compressione delle fibre generando un blocco irreversibile.", "Rallentano lo scorrimento della corda nel connettore aumentando la forza d'arresto."],
+    "options": [
+      "Aumentano la tenuta del nodo per compressione delle fibre generando un blocco irreversibile.",
+      "Generano calore per attrito provocando la rottura della corda per fusione (effetto nodo).",
+      "Rallentano lo scorrimento della corda nel connettore aumentando la forza d'arresto."
+    ],
     "correct": "Generano calore per attrito provocando la rottura della corda per fusione (effetto nodo).",
     "explanation": "Modulo 5: 'le spire del nodo che si trova immediatamente a monte scorrono tra di loro e si comprimono, generando calore in funzione dell'attrito... Sarà proprio questo calore a provocare la rottura della corda per fusione, in prossimità del nodo. Il meccanismo descritto viene chiamato effetto nodo.'"
+  },
+  {
+    "id": 501,
+    "area": "Forze",
+    "difficulty": "Difficile",
+    "type": "vf",
+    "text": "Un materiale interposto tra operatore e ancoraggio con la funzione di limitare la forza d'arresto viene definito 'assorbitore'.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Vero",
+    "explanation": "Modulo 3: 'è necessario interporre nella catena di assicurazione elementi cosiddetti assorbitori', al fine di ridurre l'energia cinetica e la forza d'arresto massima a 6 kN."
+  },
+  {
+    "id": 502,
+    "area": "Meccanica",
+    "difficulty": "Media",
+    "type": "vf",
+    "text": "Una leva di primo genere ha sempre il fulcro compreso tra la forza motrice e la forza resistente.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Vero",
+    "explanation": "Definizione classica di meccanica applicata: la leva di primo intergenere pone il fulcro nel mezzo."
+  },
+  {
+    "id": 503,
+    "area": "Meccanica",
+    "difficulty": "Facile",
+    "type": "vf",
+    "text": "L'uso di una carrucola fissa dimezza il carico da sollevare.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Falso",
+    "explanation": "La carrucola fissa devia solo la direzione della forza applicata, senza operare alcun vantaggio meccanico sul carico."
+  },
+  {
+    "id": 504,
+    "area": "Nodi",
+    "difficulty": "Media",
+    "type": "vf",
+    "text": "Il bloccante di emergenza noto come 'machard' deve essere eseguito possibilmente con cordino di diametro inferiore a quello della corda principale.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Vero",
+    "explanation": "Modulo 5: l'efficacia del blocco aumenta proporzionalmente alla differenza di diametro tra cordino e corda."
+  },
+  {
+    "id": 505,
+    "area": "Scenari",
+    "difficulty": "Facile",
+    "type": "vf",
+    "text": "Il rischio si valuta unicamente all'inizio dell'intervento SAF e non può essere ricalcolato in fase di soccorso.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Falso",
+    "explanation": "Modulo 2: l'analisi e la valutazione dei rischi è un processo continuo, fino al termine delle operazioni."
+  },
+  {
+    "id": 506,
+    "area": "Attrezzature",
+    "difficulty": "Media",
+    "type": "vf",
+    "text": "Il kit di assicurazione individuale deve funzionare obbligatoriamente anche in caso di corda ghiacciata o infangata.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Vero",
+    "explanation": "Requisito di capitolato descritto nel Modulo 4 per il discensore del kit (EN 12841 C)."
+  },
+  {
+    "id": 507,
+    "area": "Ancoraggi",
+    "difficulty": "Difficile",
+    "type": "vf",
+    "text": "Il coefficiente di sicurezza per gli ancoraggi realizzati dai VVF prevede la moltiplicazione del carico applicato limitatamente per un fattore 1,5.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Falso",
+    "explanation": "Solitamente le operazioni SAF in corda adottano componenti certificati 22 o 35 kN per assorbire anche carichi dinamici estremi molto superiori a 1,5."
+  },
+  {
+    "id": 508,
+    "area": "Procedure",
+    "difficulty": "Media",
+    "type": "vf",
+    "text": "La standardizzazione delle manovre VVF è finalizzata unicamente a comporre statistiche descrittive.",
+    "options": [
+      "Vero",
+      "Falso"
+    ],
+    "correct": "Falso",
+    "explanation": "La standardizzazione serve prioritariamente alla reversibilità dell'errore e a mitigare gli errori derivanti dallo stress in ambiente ostile."
+  },
+  {
+    "id": 601,
+    "area": "Materiali",
+    "difficulty": "Media",
+    "type": "multi",
+    "text": "Quali elementi costituiscono il sistema di ancoraggio mobile con certificazione EN 795 B realizzato mediante fettuccia ad anello chiuso?",
+    "options": [
+      "Nastro piatto o tubolare di fibra sintetica, cuciture multiple di giuntura, lunghezza schiacciata di 60-80-120 cm e larghezza non oltre 3 cm.",
+      "Cavo d'acciaio in kevlar intrecciato, senza alcuna cucitura ma solo fusione a caldo.",
+      "Fettuccia singola con terminale plastico inseribile nei fori e regolatore a scorrimento lungo."
+    ],
+    "correct": "Nastro piatto o tubolare di fibra sintetica, cuciture multiple di giuntura, lunghezza schiacciata di 60-80-120 cm e larghezza non oltre 3 cm.",
+    "explanation": "Dal Modulo 4: Descrizione standard dell'ancoraggio tessile impiegato dai VVF."
+  },
+  {
+    "id": 602,
+    "area": "Nodi",
+    "difficulty": "Media",
+    "type": "multi",
+    "text": "A quanto ammonta la lunghezza minima consigliata per l'asola che precede la controasola di sicurezza al nodo mezzo barcaiolo?",
+    "options": [
+      "Almeno 60 cm.",
+      "Meno di 10 cm, purché rigida.",
+      "Un metro e mezzo.",
+      "Esattamente e non oltre 20 cm."
+    ],
+    "correct": "Almeno 60 cm.",
+    "explanation": "Modulo 5: L'asola deve essere lunga minimo 60 cm per poter realizzare agilmente la successiva controasola di blocco."
+  },
+  {
+    "id": 603,
+    "area": "Scenari",
+    "difficulty": "Facile",
+    "type": "multi",
+    "text": "Quali componenti descrivono l'acronimo comportamentale O.R.A. in ambito di valutazione rischi nel soccorso SAF?",
+    "options": [
+      "Osserva - Rifletti - Agisci",
+      "Organizza - Rileva - Arrenditi",
+      "Ostacola - Rimonta - Avanza",
+      "Opera - Rifuggi - Assicura"
+    ],
+    "correct": "Osserva - Rifletti - Agisci",
+    "explanation": "Modulo 2: O.R.A. definisce il processo cognitivo primario di un soccorritore in sicurezza."
+  },
+  {
+    "id": 604,
+    "area": "Attrezzature",
+    "difficulty": "Difficile",
+    "type": "multi",
+    "text": "Rispetto alla configurazione di base dell'imbracatura resistente al calore, quali sono gli elementi che ne permettono il facile aggancio allo sternale e all'addominale?",
+    "options": [
+      "Bande in poliestere fosforescente cucite parallelamente ai bordi.",
+      "I moschettoni paralleli con ghiera a vite interamente in rame.",
+      "Una fettuccia a y con ramo corto di 10 cm finalizzato all'aggancio sul retro (sternale) solidale all'anello addominale a doppia D.",
+      "Tiranti plastici regolabili dalla zona lombare per assicurare i cosciali."
+    ],
+    "correct": "Una fettuccia a y con ramo corto di 10 cm finalizzato all'aggancio sul retro (sternale) solidale all'anello addominale a doppia D.",
+    "explanation": "Modulo 4: composizione accurata della zona toracica-addominale dell'imbraco aramidico."
+  },
+  {
+    "id": 605,
+    "area": "Meccanica",
+    "difficulty": "Media",
+    "type": "multi",
+    "text": "In uno schema fisico a bilancia o carrucola, come si classifica un apparato la cui forza motrice equivale meccanicamente alla forza resistente in equilibrio perfetto?",
+    "options": [
+      "Macchina sfavorevole.",
+      "Macchina indifferente.",
+      "Macchina resistente.",
+      "Macchina vantaggiosa."
+    ],
+    "correct": "Macchina indifferente.",
+    "explanation": "Definizione accademica utilizzata nei manuali per identificare sistemi quali la carrucola fissa, che in statica mantiene Fm = Fr."
   }
 ]
